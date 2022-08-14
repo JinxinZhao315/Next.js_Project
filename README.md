@@ -30,7 +30,7 @@ Plaid Integration:
 
 ## Deployment and Demo:
 
-[Vercel Deployment Link](next-js-project-jinxinzhao315.vercel.app)
+[Vercel Deployment Link](https://next-js-project-jinxinzhao315.vercel.app)
 
 [Video Demo Link](https://drive.google.com/file/d/173imCnb1hd14dJuYbUsa7j2_7N1seTse/view?usp=sharing)
 
