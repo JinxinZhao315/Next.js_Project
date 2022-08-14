@@ -133,8 +133,8 @@ const Index = () => {
                   <dt className="text-sm font-medium text-gray-500">Plaid Account</dt>
                   <dd className="mt-1 flex text-sm text-gray-900 sm:mt-0 sm:col-span-2">
                     <span className="flex-grow">
-                      Plaid is a fintech service that help applications connect with users' bank accounts. 
-                      Click the "Connect" button to experience plaid in action!
+                      Plaid is a fintech service that help applications connect with users&apos; bank accounts. 
+                      Click the &quot;Connect&quot; button to experience plaid in action!
                     </span>
                     <span className="ml-4 flex-shrink-0">
                       <button
