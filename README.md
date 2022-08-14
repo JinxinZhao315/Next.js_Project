@@ -1,34 +1,89 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## Introduction
 
-## Getting Started
+This is a full-stack web dev project built with Next.js, GraphQL, JavaScript & TypeScript, and Prisma as part of my internship training in RoadFlex (RF). The website in this project has 3 pages: signup, signin, and signed-in user information display.
 
-First, run the development server:
+User credentials are stored in a persistent database hosted on [Heroku](https://www.heroku.com/). A referral system is also implemented, where if a new user signs up with the referral code of an existing user, the existing user gets a referral bonus based on his referral count (also stored in database, $5 per referral).
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+This project also includes an API integration with [Plaid](https://plaid.com/), a financial service provider. The Plaid integration can be found in the signin-ed in page as the "Connect to Plaid" button, which returns the financial information of a mock user as Json from Plaid's sandbox environment.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+<br>
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+## Website Preview
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+Signin Page:
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+![Signin](media/Signin.png)
 
-## Learn More
+Signup Page:
 
-To learn more about Next.js, take a look at the following resources:
+![Signup](media/Signup.png)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+User Information Page:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+![UserInfo](media/UserInfo.png)
 
-## Deploy on Vercel
+Plaid Integration:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+![Plaid](media/Plaid.png)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+<br>
+
+## Video demo:
+
+[Video Demo Link](https://drive.google.com/file/d/173imCnb1hd14dJuYbUsa7j2_7N1seTse/view?usp=sharing)
+
+<br>
+
+## Running the project
+
+To run the project on your local computer, follow these steps:
+
+1. Clone this repo. Navigate to the `Next.js_Project` folder.
+
+2. To install dependencies, run
+
+   ```
+   npm install
+   ```
+
+3. Create a file named `.env`, and copy the contents of the `.env.sample` file into `.env`.
+
+4. Input a database URL under the `DATABASE_URL` variable in `.env`. You can create a free PostgreSQL database on Heroku by following this [tutorial](https://dev.to/prisma/how-to-setup-a-free-postgresql-database-on-heroku-1dc1).
+
+5. For the Plaid integration in this project to work, you need to input valid `PLAID_CLIENT_ID` and `PLAID_SECRET` API keys in `.env`. To do so, go to [plaid.com](https://plaid.com/) and click "Get API Keys". You need to sign up for an account and use the "sandbox" mode credentials. If you do not intend to use Plaid, skip this step.
+
+6. Sync your remote database schema with your local Prisma schema by running
+
+   ```
+   npx prisma db push
+   ```
+
+   You can add some dummy data in the database by running
+
+   ```
+   npx prisma studio
+   ```
+
+   to see and manully change records in the database.
+
+7. To launch the website, run
+
+   ```
+   npm run dev
+   ```
+
+8. Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+9. For the Plaid integration to work, navigate to the `Next.js_Project/node` folder. Run
+
+   ```
+   node index.js
+   ```
+
+   to run the Plaid backend server at http://localhost:8000. If you do not intent to use Plaid, skip this step.
+
+<br>
+
+## Ackowledgement
+
+This project is based on the following Next.js tutorial: [How to Build a Fullstack App with Next.js, Prisma, and PostgreSQL](https://vercel.com/guides/nextjs-prisma-postgres)
