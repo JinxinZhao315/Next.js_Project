@@ -1,6 +1,6 @@
 ## Introduction
 
-This is a full-stack web dev project built with Next.js, GraphQL, JavaScript & TypeScript, and Prisma as part of my internship training in RoadFlex. The website in this project has 3 pages: signup, signin, and signed-in user information display.
+This is a functional website developed full-stack with Next.js, GraphQL, JavaScript & TypeScript, and Prisma as part of my internship training in RoadFlex. The website in this project has 3 pages: signup, signin, and signed-in user information display.
 
 User credentials are stored in a persistent database hosted on [Heroku](https://www.heroku.com/). A referral system is also implemented, where if a new user signs up with the referral code of an existing user, the existing user gets a referral bonus based on his referral count (also stored in database, $5 per referral).
 
