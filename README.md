@@ -1,10 +1,10 @@
 ## Introduction
 
-This is a functional website developed by myself with Next.js, GraphQL, JavaScript & TypeScript, and Prisma as part of my internship training in RoadFlex. The website in this project has 3 pages: signup, signin, and signed-in user information display.
+This is a fullstack project developed as a part of my internship training at RoadFlex, built with React, Next.js, GraphQL, JavaScript & TypeScript, and Prisma. The website in this project has 3 pages: signup, sign in, and signed-in user information display.
 
 User credentials are stored in a persistent database hosted on [Heroku](https://www.heroku.com/). A referral system is also implemented, where if a new user signs up with the referral code of an existing user, the existing user gets a referral bonus based on his referral count (also stored in database, $5 per referral).
 
-This project also includes an API integration with [Plaid](https://plaid.com/), a financial service provider. The Plaid integration can be found in the signin-ed in page as the "Connect to Plaid" button, which returns the financial information of a mock user as Json from Plaid's sandbox environment.
+This project also includes an API integration with [Plaid](https://plaid.com/), a financial service provider. The "Connect to Plaid" button in the user info page returns the financial information of a mock user as JSON from Plaid's sandbox environment.
 
 <br>
 
